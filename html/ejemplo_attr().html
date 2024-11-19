@@ -1,0 +1,31 @@
+<html>
+<head>
+ <meta charset="utf-8">
+ <title>Propiedad padding</title>
+ <style>
+    .element::after {
+ content: attr(data-author);
+ font-weight: bold;
+ color: green;
+}
+.my-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+     color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    }
+    .my-button:hover {
+    background-color: #45a049;
+    }
+    .my-button:active {
+    background-color: #3e8e41;
+    }
+ </style>
+</head>
+<body>
+<p class="element" data-author="Soy yo">El autor es  </p>
+<button class="my-button"><a href="../index.html"><span>Volver</span></a></button>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tool tip</title>
+    <style>
+        .tooltip-container {
+            position: relative;
+            display: inline-block;
+        }
+        .tooltip-text {
+            visibility: hidden;
+            width: 120px;
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            top: 125%; 
+            /* Posiciona el tooltip bajo del elemento */
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .tooltip-container:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+        }
+        .my-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+     color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    }
+    .my-button:hover {
+    background-color: #45a049;
+    }
+    .my-button:active {
+    background-color: #3e8e41;
+    }
+    </style>
+</head>
+<body>
+    <div class="tooltip-container">
+        <span class="tooltip-text">Mensaje del tooltip</span>
+        Este elemento tiene un tooltip
+    </div>
+    <button class="my-button"><a href="../index.html"><span>Volver</span></a></button>
+</body>
+</html>
